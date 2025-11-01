@@ -63,34 +63,43 @@ Y= A⊕B
 
 
 **PROGRAM**
-```vhdl
-module EXP1(a,b,f1,f2,f3,f4,f5,f6,f7);
-input a,b;
-output f1,f2,f3,f4,f5,f6,f7;
-assign f1=a&b;
-assign f2=a|b;
-assign f3=~a;
-assign f4=~f1;
-assign f5=~f2;
-assign f6=a^b;
-assign f7=~(a^b);
-endmodule
-```
 
 Program for logic gates and verify its truth table in quartus using Verilog programming
 
- Developed by: AKBAR I
- RegisterNumber: 212224230014
+ Developed by:Akbar I
+ RegisterNumber:212224230014
+
+ 
+ module logicgate(a,b,c);
+ input a;
+ input b;
+ output [6:0] c;
+ 
+ 
+       assign c[0]=a&b;
+		 assign c[1]=a|b;
+		 assign c[2]=~(a&b);
+		 assign c[3]=~(a|b);
+		 assign c[4]=a^b;
+		 assign c[5]=~(a^b);
+		 assign c[6]=~a;
+		 
+endmodule
+
+ ''''
  
 **Logic symbol & Truthtable**
+<img width="831" height="127" alt="image" src="https://github.com/user-attachments/assets/398c74d1-5851-41c5-90f3-d1298f3a1ba8" />
 
-![WhatsApp Image 2024-10-29 at 10 24 49_9b9174d9](https://github.com/user-attachments/assets/f50db3be-85c5-4310-b107-277820cb027b)
 
 **RTL realization Output:** 
-![EXP1](https://github.com/user-attachments/assets/a474471d-1418-4744-8386-7bdbd03f9fc2)
+<img width="775" height="726" alt="image" src="https://github.com/user-attachments/assets/cd98689e-9cd6-4575-8ffe-3fdd2ce40799" />
+
+
 
 **RTL**
-![Screenshot 2025-03-07 140221](https://github.com/user-attachments/assets/af2e0216-e291-477b-83c8-a54ed2e79969)
+<img width="850" height="602" alt="image" src="https://github.com/user-attachments/assets/25d67d70-df9a-4fbb-b8ec-c2ab215645d8" />
 
 **Result:**
-The basic logic gates are studied and the truth tables are verified.
+
+
